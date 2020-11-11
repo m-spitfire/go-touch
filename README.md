@@ -7,14 +7,32 @@ my own.
 It does not completely copies the command, if file exists it changes its
 timestamp, if it doesn't, creates a new file.
 
-## Requirements
+## Installation
+
+Go to the [releases](1) page, install `touch.exe`, and add directory, where `touch.exe` lives,
+to the `PATH` variable.
+
+In Windows
+
+```bat
+set PATH=%PATH%;C:\path\to\dir\of\touch
+```
+
+In Mac and Linux
+
+```sh
+export PATH=$PATH:/path/to/dir/of/touch
+```
+
+### Installation from source
+
+#### Requirements for installing from  sourcre
 
 * golang compiler >= 1.15
 
 I didn't test it with old versions of go, so I wrote `>=1.15`, but I don't think
 it could fail with older versions
-
-## Installation
+<hr>
 
 Clone the repository, and `cd` into it
 
