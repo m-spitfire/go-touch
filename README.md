@@ -18,12 +18,6 @@ In Windows
 set PATH=%PATH%;C:\path\to\dir\of\touch
 ```
 
-In Mac and Linux
-
-```sh
-export PATH=$PATH:/path/to/dir/of/touch
-```
-
 ### Installation from source
 
 #### Requirements for installing from  sourcre
@@ -36,33 +30,27 @@ it could fail with older versions
 
 Clone the repository, and `cd` into it
 
-```sh
+```bat
 git clone https://github.com/spitfire-hash/go-touch
 cd go-touch
 ```
 
 Install the package
 
-```sh
+```bat
 go install spitfire-hash/touch
 ```
 
 Don't forget to add your `~/go/bin` directory to your `PATH` variable.
-In Mac and Linux you just need to do this
+First find the `bin` path:
 
-```sh
-export PATH=$PATH:$(dirname $(go list -f '{{.Target}}' .))
-```
-
-In windows first find the `bin` path:
-
-```sh
+```bat
 go list -f '{{.Target}}'
 ```
 
 Then the output should be something like this:
 
-```sh
+```bat
 'C:\Users\<User>\go\bin\touch.exe'
 ```
 
